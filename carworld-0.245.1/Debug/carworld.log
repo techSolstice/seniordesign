@@ -1,0 +1,60 @@
+﻿Build started 11/19/2012 12:38:41 PM.
+Project "F:\compdev\carworld-0.245.1\msdev\carworld.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _DEBUG /D WIN32 /D USE_WIN_SOCKETS /D _VC80_UPGRADE=0x0600 /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"../Debug\\" /Fd"../Debug\vc90.pdb" /FR"../Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\src\DXJoystick.cpp ..\src\H_PosixSocket.cpp ..\src\H_WinSocket.cpp ..\src\SDLJoystick.cpp ..\src\SDLMain.cpp ..\src\H_Geometry.cpp ..\src\H_Graphics.cpp ..\src\H_Input.cpp ..\src\H_Keys.cpp ..\src\H_Object.cpp ..\src\H_Prompt.cpp ..\src\H_Standard.cpp ..\src\H_Texture.cpp ..\src\H_Variable.cpp ..\src\H_XML.cpp ..\src\CarWorld.cpp ..\src\CarWorldClasses.cpp ..\src\CarWorldClient.cpp ..\src\CarWorldMain.cpp ..\src\CarWorldNet.cpp ..\src\CWCamera.cpp ..\src\CWVehicle.cpp ..\src\Tacho.cpp ..\src\WorldBlock.cpp
+  WorldBlock.cpp
+f:\compdev\carworld-0.245.1\src\worldblock.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  Tacho.cpp
+f:\compdev\carworld-0.245.1\src\tacho.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CWVehicle.cpp
+f:\compdev\carworld-0.245.1\src\cwvehicle.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CWCamera.cpp
+f:\compdev\carworld-0.245.1\src\cwcamera.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CarWorldNet.cpp
+f:\compdev\carworld-0.245.1\src\carworldnet.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CarWorldMain.cpp
+f:\compdev\carworld-0.245.1\src\carworldmain.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CarWorldClient.cpp
+f:\compdev\carworld-0.245.1\src\carworldclient.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CarWorldClasses.cpp
+f:\compdev\carworld-0.245.1\src\carworldclasses.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  CarWorld.cpp
+f:\compdev\carworld-0.245.1\src\carworld.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_XML.cpp
+f:\compdev\carworld-0.245.1\src\h_xml.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Variable.cpp
+f:\compdev\carworld-0.245.1\src\h_variable.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Texture.cpp
+f:\compdev\carworld-0.245.1\src\h_texture.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Standard.cpp
+f:\compdev\carworld-0.245.1\src\h_standard.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Prompt.cpp
+f:\compdev\carworld-0.245.1\src\h_prompt.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Object.cpp
+f:\compdev\carworld-0.245.1\src\h_object.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Keys.cpp
+f:\compdev\carworld-0.245.1\src\h_keys.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Input.cpp
+f:\compdev\carworld-0.245.1\src\h_input.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Graphics.cpp
+f:\compdev\carworld-0.245.1\src\h_graphics.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_Geometry.cpp
+f:\compdev\carworld-0.245.1\src\h_geometry.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  SDLMain.cpp
+f:\compdev\carworld-0.245.1\src\sdlmain.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  Generating Code...
+  Compiling...
+  SDLJoystick.cpp
+f:\compdev\carworld-0.245.1\src\sdljoystick.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_WinSocket.cpp
+f:\compdev\carworld-0.245.1\src\h_winsocket.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  H_PosixSocket.cpp
+f:\compdev\carworld-0.245.1\src\h_posixsocket.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  DXJoystick.cpp
+f:\compdev\carworld-0.245.1\src\dxjoystick.cpp : fatal error C1051: program database file, 'f:\compdev\carworld-0.245.1\debug\vc90.pdb', has an obsolete format, delete it and recompile
+  Generating Code...
+Done Building Project "F:\compdev\carworld-0.245.1\msdev\carworld.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.33

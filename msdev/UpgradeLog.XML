@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="carworld">
+</Property><Property Name="Solution File" Value="C:\Users\Alex\Downloads\carworld-0.245.1\msdev\carworld.sln">
+</Property><Property Name="Date" Value="Monday, November 05, 2012">
+</Property><Property Name="Time" Value="8:14 AM">
+</Property></Properties><Event ErrorLevel="0" Project="carworld" Source="carworld.vcproj" Description="Converting project file 'C:\Users\Alex\Downloads\carworld-0.245.1\msdev\carworld.vcproj'.">
+</Event><Event ErrorLevel="1" Project="carworld" Source="carworld.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="carworld" Source="carworld.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\Alex\Downloads\carworld-0.245.1\msdev\../Release\carworld.exe') does not match the Linker's OutputFile property value '../carworld.exe' ('C:\Users\Alex\Downloads\carworld-0.245.1\msdev\../carworld.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="carworld" Source="carworld.vcproj" Description="MSB8012: $(TargetName) ('carworld') does not match the Linker's OutputFile property value '../carworldd.exe' ('carworldd') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="carworld" Source="carworld.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\Alex\Downloads\carworld-0.245.1\msdev\../Debug\carworld.exe') does not match the Linker's OutputFile property value '../carworldd.exe' ('C:\Users\Alex\Downloads\carworld-0.245.1\msdev\../carworldd.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="carworld" Source="carworld.vcproj" Description="Done converting to new project file 'C:\Users\Alex\Downloads\carworld-0.245.1\msdev\carworld.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="carworld" Source="carworld.vcproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="carworld" Source="carworld.vcxproj" Description="">
+</Event><Event ErrorLevel="0" Project="" Source="carworld.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="carworld.sln" Description="Converted">
+</Event></UpgradeLog>
