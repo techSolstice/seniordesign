@@ -8,6 +8,13 @@
 
 using namespace std;
 
-int send_data(char temp[]);
+class ArduinoCom{
+public:
+	ArduinoCom();
+	~ArduinoCom();
+//private:	TODO this will be private once this class is completed
+	int send_data(char temp[]);
+	HANDLE hDevice();
+};
 
 #endif
