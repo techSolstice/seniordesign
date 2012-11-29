@@ -14,7 +14,10 @@ public:
 	~ArduinoCom();
 //private:	TODO this will be private once this class is completed
 	int send_data(char temp[]);
+	bool open_port();
+	bool close_port();
 	HANDLE hDevice;
+	bool isConnected;
 };
 
 #endif

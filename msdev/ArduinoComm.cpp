@@ -7,12 +7,22 @@
 using namespace std;
 
 ArduinoCom::ArduinoCom(){
+	if (open_port()) isConnected = true;
+	else isConnected = false;
+}
+
+ArduinoCom::~ArduinoCom(){
+	if (isConnected) CloseHandle(hDevice);
+}
+
+bool ArduinoCom::open_port(){
 	bool debug = true;
 
 	hDevice = CreateFile("\\\\.\\COM4", GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, 0);
 
 	if (hDevice == INVALID_HANDLE_VALUE){
 		hDevice = NULL;
+		return false;
 	}
 
 	if (debug) printf("Port opened. \n");
@@ -23,13 +33,18 @@ ArduinoCom::ArduinoCom(){
 	lpTest.Parity = NOPARITY;
 	lpTest.StopBits = ONESTOPBIT;
 	SetCommState(hDevice, &lpTest);
+
+	return true;
 }
 
-ArduinoCom::~ArduinoCom(){
+bool ArduinoCom::close_port(){
 	CloseHandle(hDevice);
+	return true;
 }
 
 int ArduinoCom::send_data(char temp[]){
+	if (!isConnected) return -1;
+
 	DWORD btsIO;
 	WriteFile(hDevice, &temp, strlen(temp), &btsIO, NULL);
 

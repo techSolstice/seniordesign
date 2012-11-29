@@ -166,6 +166,7 @@
     <ClCompile Include="..\src\CWVehicle.cpp" />
     <ClCompile Include="..\src\Tacho.cpp" />
     <ClCompile Include="..\src\WorldBlock.cpp" />
+    <ClCompile Include="ArduinoComm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DXJoystick.h" />
@@ -192,6 +193,7 @@
     <ClInclude Include="..\src\CWVersion.h" />
     <ClInclude Include="..\src\Tacho.h" />
     <ClInclude Include="..\src\WorldBlock.h" />
+    <ClInclude Include="ArduinoComm.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\readme.txt" />
