@@ -2,14 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="SDL">
-      <UniqueIdentifier>{fe8c9175-6db2-4209-afdd-73026d582fbc}</UniqueIdentifier>
+      <UniqueIdentifier>{bb486f97-23bd-433e-9ca8-b0b35a4f4c50}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Generic">
-      <UniqueIdentifier>{6d64fd46-a82a-4472-9e9c-b270b945ecc6}</UniqueIdentifier>
+      <UniqueIdentifier>{d31748d6-a0e0-4418-aab4-f99b94934e99}</UniqueIdentifier>
     </Filter>
     <Filter Include="CarWorld specific">
-      <UniqueIdentifier>{f1b14111-d81f-4091-9af1-890e8dd62ea4}</UniqueIdentifier>
+      <UniqueIdentifier>{ee474479-b307-450a-bf1e-47afc3448b4f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +85,6 @@
     <ClCompile Include="..\src\WorldBlock.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
-    <ClCompile Include="ArduinoComm.cpp">
-      <Filter>CarWorld specific</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DXJoystick.h">
@@ -160,9 +157,6 @@
       <Filter>CarWorld specific</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WorldBlock.h">
-      <Filter>CarWorld specific</Filter>
-    </ClInclude>
-    <ClInclude Include="ArduinoComm.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
   </ItemGroup>
