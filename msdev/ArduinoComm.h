@@ -14,7 +14,7 @@ public:
 	~ArduinoCom();
 //private:	TODO this will be private once this class is completed
 	int send_data(char temp[]);
-	HANDLE hDevice();
+	HANDLE hDevice;
 };
 
 #endif

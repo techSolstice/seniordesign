@@ -6,33 +6,32 @@
 
 using namespace std;
 
-class ArduinoCom{
-	ArduinoCom::ArduinoCom(){
-		bool debug = true;
-		hDevice = CreateFile("\\\\.\\COM4", GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, 0);
+ArduinoCom::ArduinoCom(){
+	bool debug = true;
 
-		if (hDevice == INVALID_HANDLE_VALUE){
-			hDevice = NULL;
-		}
+	hDevice = CreateFile("\\\\.\\COM4", GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, 0);
 
-		if (debug) printf("Port opened. \n");
-		DCB lpTest;
-		GetCommState(hDevice, &lpTest);	//Accepts the device handle and the pointer to the state of the device
-		lpTest.BaudRate = CBR_9600;
-		lpTest.ByteSize = 8;
-		lpTest.Parity = NOPARITY;
-		lpTest.StopBits = ONESTOPBIT;
-		SetCommState(hDevice, &lpTest);
-
-	}
-	ArduinoCom::ArduinoCom(){
-		CloseHandle(hDevice);
+	if (hDevice == INVALID_HANDLE_VALUE){
+		hDevice = NULL;
 	}
 
-	int send_data(char temp[]){
-		DWORD btsIO;
-		WriteFile(hDevice, &temp, strlen(temp), &btsIO, NULL);
+	if (debug) printf("Port opened. \n");
+	DCB lpTest;
+	GetCommState(hDevice, &lpTest);	//Accepts the device handle and the pointer to the state of the device
+	lpTest.BaudRate = CBR_9600;
+	lpTest.ByteSize = 8;
+	lpTest.Parity = NOPARITY;
+	lpTest.StopBits = ONESTOPBIT;
+	SetCommState(hDevice, &lpTest);
+}
 
-		return 0;
-	}
-};
+ArduinoCom::~ArduinoCom(){
+	CloseHandle(hDevice);
+}
+
+int ArduinoCom::send_data(char temp[]){
+	DWORD btsIO;
+	WriteFile(hDevice, &temp, strlen(temp), &btsIO, NULL);
+
+	return 0;
+}

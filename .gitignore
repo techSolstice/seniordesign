@@ -15,3 +15,12 @@
 #Alex added
 *.obj
 *.log
+*.suo
+*.user
+*.pdb
+*.lastbuildstate
+*.tlog
+*.idb
+*.sdf
+*.log
+
