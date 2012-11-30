@@ -85,7 +85,7 @@
     <ClCompile Include="..\src\WorldBlock.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
-    <ClCompile Include="ArduinoComm.cpp">
+    <ClCompile Include="..\src\ArduinoComm.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
   </ItemGroup>
@@ -162,7 +162,7 @@
     <ClInclude Include="..\src\WorldBlock.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
-    <ClInclude Include="ArduinoComm.h">
+    <ClInclude Include="..\src\ArduinoComm.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
   </ItemGroup>

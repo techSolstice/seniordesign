@@ -1,6 +1,7 @@
 
 #include "H_Geometry.h"
 #include "H_Input.h"
+#include "ArduinoComm.h"
 
 /*
 #include "stdafx.h"
@@ -76,11 +77,12 @@ KeyJoystick::KeyJoystick(HWindow *w) :
 	button(false)
 {
 	hDevice = open_port();
+	ArduinoCom* ComPort = new ArduinoCom;
 }
 
 KeyJoystick::~KeyJoystick()
 {
-	close_port();
+	ComPort.close_port();
 }
 
 bool KeyJoystick::IsValid()
@@ -130,7 +132,9 @@ void KeyJoystick::UpdateState()
 	else if (Yaxis<0)
 		Yaxis = H_MIN(0,Yaxis+speed);
 
-	if (UpState) send_data("U");
+	if (UpState) {
+		ComPort.send_data("U");
+	}
 }
 
 REAL KeyJoystick::GetAxisPos(int i)
@@ -156,7 +160,7 @@ bool KeyJoystick::SetForceFeedback(REAL x, REAL y)
 
 
 //Added by Alex
-
+/*
 HANDLE KeyJoystick::open_port(){
 	bool debug = true;
 	HANDLE hDev = CreateFile("\\\\.\\COM4", GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, 0);
@@ -177,6 +181,8 @@ HANDLE KeyJoystick::open_port(){
 	return hDev;
 }
 
+
+
 void KeyJoystick::close_port(){
 		CloseHandle(hDevice);
 }
@@ -187,3 +193,4 @@ int KeyJoystick::send_data(char temp[]){
 
 	return 0;
 }
+*/

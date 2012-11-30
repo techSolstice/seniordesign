@@ -13,6 +13,7 @@ using namespace std;
 #include <stdio.h>
 #include <conio.h>
 #include <string>
+#include "ArduinoComm.h"
 
 class KeyJoystick : public HJoystick
 {
@@ -34,6 +35,7 @@ public:
 	SDLKey right_key;
 	SDLKey button_key;
 	REAL speed;
+	ArduinoCom ComPort;
 private:
 	HWindow *m_HWindow;
 	REAL Yaxis; //from -1(down) to 1(up)
@@ -43,6 +45,7 @@ private:
 	HANDLE open_port();
 	void close_port();
 	int KeyJoystick::send_data(char temp[]);
+	
 };
 
 #endif //__H_INPUT_H_

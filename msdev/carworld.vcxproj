@@ -49,7 +49,7 @@
     <OutDir>../$(Configuration)\</OutDir>
     <IntDir>../$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\sdl\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\oitlabs\Downloads\game\msdev;C:\sdl\include;$(IncludePath)</IncludePath>
     <LibraryPath>c:\sdl\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,6 +142,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\ArduinoComm.cpp" />
     <ClCompile Include="..\src\DXJoystick.cpp" />
     <ClCompile Include="..\src\H_PosixSocket.cpp" />
     <ClCompile Include="..\src\H_WinSocket.cpp" />
@@ -166,9 +167,9 @@
     <ClCompile Include="..\src\CWVehicle.cpp" />
     <ClCompile Include="..\src\Tacho.cpp" />
     <ClCompile Include="..\src\WorldBlock.cpp" />
-    <ClCompile Include="ArduinoComm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\ArduinoComm.h" />
     <ClInclude Include="..\src\DXJoystick.h" />
     <ClInclude Include="..\src\H_Main.h" />
     <ClInclude Include="..\src\SDLJoystick.h" />
@@ -193,7 +194,6 @@
     <ClInclude Include="..\src\CWVersion.h" />
     <ClInclude Include="..\src\Tacho.h" />
     <ClInclude Include="..\src\WorldBlock.h" />
-    <ClInclude Include="ArduinoComm.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\readme.txt" />
