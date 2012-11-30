@@ -42,6 +42,17 @@ bool ArduinoCom::close_port(){
 	return true;
 }
 
+char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance){
+	char packet[5];
+	packet[0] = state;
+	packet[1] = incline;
+	packet[2] = angle;
+	packet[3] = vibration;
+	packet[4] = resistance;
+
+	return packet;
+}
+
 int ArduinoCom::send_data(char temp[]){
 	if (!isConnected) return -1;
 
