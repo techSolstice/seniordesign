@@ -217,6 +217,13 @@ void OpenDataFile(ifstream &infile, const char *FileName)
 		infile.open(FullPath.c_str(), ios::in || ios::binary);
 	}
 
+	if (!infile){
+		infile.clear();
+		FullPath = "F:/UNLV Homework/Senior Design/game/";
+		FullPath += FileName;
+		infile.open(FullPath.c_str(), ios::in || ios::binary);
+	}
+
 	if (!infile)
 		throw HException(string("file : \"")+FileName+("\" failed to open."));
 	cout << "opened: \"" << FullPath << "\"" << endl;
