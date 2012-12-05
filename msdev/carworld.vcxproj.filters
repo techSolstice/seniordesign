@@ -88,6 +88,9 @@
     <ClCompile Include="..\src\ArduinoComm.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>CarWorld specific</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DXJoystick.h">
@@ -163,6 +166,9 @@
       <Filter>CarWorld specific</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ArduinoComm.h">
+      <Filter>CarWorld specific</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <string>
-#include "ArduinoComm.h";
+#include "ArduinoComm.h"
 
 using namespace std;
 

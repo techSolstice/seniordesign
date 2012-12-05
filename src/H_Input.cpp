@@ -103,8 +103,6 @@ bool KeyJoystick::SetForceFeedback(REAL x, REAL y)
 	return false;
 }
 
-
-//Added by Alex
 /*
 HANDLE KeyJoystick::open_port(){
 	bool debug = true;
