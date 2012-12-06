@@ -14,6 +14,8 @@ using namespace std;
 #include <conio.h>
 #include <string>
 #include "ArduinoComm.h"
+#include "GameState.h"
+
 
 class KeyJoystick : public HJoystick
 {
@@ -35,7 +37,8 @@ public:
 	SDLKey right_key;
 	SDLKey button_key;
 	REAL speed;
-	ArduinoCom ComPort;
+	ArduinoCom* ComPort;
+	GameState* gameState;
 private:
 	HWindow *m_HWindow;
 	REAL Yaxis; //from -1(down) to 1(up)
@@ -45,6 +48,9 @@ private:
 	HANDLE open_port();
 	void close_port();
 	int KeyJoystick::send_data(char temp[]);
+
+	
+	void UpdateGameState();
 	
 };
 

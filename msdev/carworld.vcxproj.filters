@@ -88,7 +88,7 @@
     <ClCompile Include="..\src\ArduinoComm.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
-    <ClCompile Include="GameState.cpp">
+    <ClCompile Include="..\src\GameState.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
   </ItemGroup>
@@ -168,7 +168,7 @@
     <ClInclude Include="..\src\ArduinoComm.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
-    <ClInclude Include="GameState.h">
+    <ClInclude Include="..\src\GameState.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
   </ItemGroup>

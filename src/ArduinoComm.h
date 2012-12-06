@@ -12,6 +12,7 @@ class ArduinoCom{
 public:
 	ArduinoCom();
 	~ArduinoCom();
+	char* create_packet();
 //private:	TODO this will be private once this class is completed
 	int send_data(char temp[]);
 	bool open_port();
