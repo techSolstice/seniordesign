@@ -38,6 +38,7 @@ bool ArduinoCom::open_port(){
 }
 
 bool ArduinoCom::close_port(){
+	isConnected = false;
 	CloseHandle(hDevice);
 	return true;
 }
@@ -54,10 +55,9 @@ char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibra
 }
 
 int ArduinoCom::send_data(char temp[]){
-	if (!isConnected) return -1;
-
-	DWORD btsIO;
-	WriteFile(hDevice, &temp, strlen(temp), &btsIO, NULL);
-
+	if (isConnected){
+		DWORD btsIO;
+		WriteFile(hDevice, &temp, strlen(temp), &btsIO, NULL);
+	}
 	return 0;
 }

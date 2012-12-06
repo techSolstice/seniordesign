@@ -82,9 +82,9 @@ void KeyJoystick::UpdateState()
 	else if (Yaxis<0)
 		Yaxis = H_MIN(0,Yaxis+speed);
 
-//	if (UpState) {
-//		ComPort.send_data("U");
-//	}
+	if (UpState) {
+		ComPort->send_data("U");
+	}
 }
 
 void KeyJoystick::UpdateGameState(){
