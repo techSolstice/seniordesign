@@ -6,6 +6,19 @@
 
 using namespace std;
 
+/*
+	Class: GameState
+	This class will handle all interactions with the game state and packets
+	to be sent to the Arduino.  This includes rotation, resistance, angle, etc.
+
+	This class will contain packet interactions and formations.  Packets are
+	currently designed as follows:
+
+	=========================
+	| a | b | c | d | e | f |
+	=========================
+*/
+
 	GameState::GameState(){
 		state = 0;
 		incline = 0;
