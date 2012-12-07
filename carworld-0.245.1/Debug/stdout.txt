@@ -1,2 +1,0 @@
-SDL could not load : "data/Landscape/rocks.png".Failed loading libpng15-15.dll: The specified module could not be found.
-
