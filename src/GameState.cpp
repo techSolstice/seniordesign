@@ -95,7 +95,7 @@ using namespace std;
 		}
 	}
 	
-		byte GameState::getState(){return (byte)state;}
+		byte GameState::getState(){return (byte)('0'+state);}
 		
 		byte GameState::getIncline(){return (byte)incline;}
 		byte GameState::getAngle(){return (byte)angle;}

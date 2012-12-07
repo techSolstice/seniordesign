@@ -61,6 +61,6 @@ SDL video driver name: windib
 initiating graphics...
 glLockArrays initiated...
 glUnlockArrays initiated...
-OpenGL renderer:  ATI Mobility Radeon HD 4225  
-OpenGL renderer vendor:  ATI Technologies Inc.
-OpenGL rend
+OpenGL renderer:  Intel(R) HD Graphics 3000
+OpenGL renderer vendor:  Intel
+OpenGL renderer version: 3.1.0 
