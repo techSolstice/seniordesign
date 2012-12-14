@@ -12,12 +12,13 @@ class ArduinoCom{
 public:
 	ArduinoCom();
 	~ArduinoCom();
+
 	char* create_packet();
-//private:	TODO this will be private once this class is completed
+	char* create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance);
 	int send_data(char* temp);
 	bool open_port();
-	char* create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance);
 	bool close_port();
+
 	static HANDLE hDevice;
 	static bool isConnected;
 };

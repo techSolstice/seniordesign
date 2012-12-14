@@ -15,6 +15,9 @@ WorldBlock::MyTriangle::MyTriangle() :
 	SurfaceType(GRASS_SURFACE)
 {}
 
+/**
+	Reads in 4 integers: i, j, k, and surfacetype
+*/
 void WorldBlock::MyTriangle::Read(istream &in)
 {
 	in >> MyI >> MyJ >> MyK >> SurfaceType;

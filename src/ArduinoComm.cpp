@@ -24,6 +24,26 @@ ArduinoCom::~ArduinoCom(){
 	}
 }
 
+char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance){
+	char packet[5];
+	packet[0] = state + '0';
+	packet[1] = incline + '0';
+	packet[2] = angle + '0';
+	packet[3] = vibration + '0';
+	packet[4] = resistance + '0';
+
+	return packet;
+}
+
+int ArduinoCom::send_data(char* temp){
+	if (open_port()){
+		DWORD btsIO;
+		WriteFile(ArduinoCom::hDevice, &temp, strlen(temp), &btsIO, NULL);
+	}
+	return 0;
+}
+
+
 bool ArduinoCom::open_port(){
 	bool debug = true;
 
@@ -52,21 +72,3 @@ bool ArduinoCom::close_port(){
 	return true;
 }
 
-char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance){
-	char packet[5];
-	packet[0] = state + '0';
-	packet[1] = incline + '0';
-	packet[2] = angle + '0';
-	packet[3] = vibration + '0';
-	packet[4] = resistance + '0';
-
-	return packet;
-}
-
-int ArduinoCom::send_data(char* temp){
-	if (open_port()){
-		DWORD btsIO;
-		WriteFile(ArduinoCom::hDevice, &temp, strlen(temp), &btsIO, NULL);
-	}
-	return 0;
-}

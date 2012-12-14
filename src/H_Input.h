@@ -36,6 +36,11 @@ public:
 	SDLKey left_key;
 	SDLKey right_key;
 	SDLKey button_key;
+	SDLKey increaseIncline_key;
+	SDLKey decraseIncline_key;
+
+
+
 	REAL speed;
 	ArduinoCom* ComPort;
 	GameState* gameState;

@@ -85,10 +85,12 @@ void KeyJoystick::UpdateState()
 	if (UpState) {
 		ComPort->send_data("U");
 	}
+	UpdateGameState();
 }
 
 void KeyJoystick::UpdateGameState(){
-	if (m_HWindow->IsPressed(SDLK_q)) (*gameState).increaseIncline(1);
+	if (m_HWindow->IsPressed(SDLK_q))
+		(*gameState).increaseIncline(1);
 	if (m_HWindow->IsPressed(SDLK_a)) (*gameState).increaseIncline(-1);
 	if (m_HWindow->IsPressed(SDLK_w)) (*gameState).increaseAngle(1);
 	if (m_HWindow->IsPressed(SDLK_s)) (*gameState).increaseAngle(-1);
