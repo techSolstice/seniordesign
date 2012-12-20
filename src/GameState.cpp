@@ -34,11 +34,11 @@ using namespace std;
 		d: direction
 		b: buttons & e-brake
 */
-unsigned int GameState::state = 0;
-unsigned int GameState::incline = 0;
+int GameState::state = 0;
+int GameState::incline = 0;
 int GameState::angle = 0;
-unsigned int GameState::vibration = 0;
-unsigned int GameState::resistance = 0;
+int GameState::vibration = 0;
+int GameState::resistance = 0;
 
 
 	GameState::GameState(){
@@ -58,8 +58,7 @@ unsigned int GameState::resistance = 0;
 		Increases the incline by a set interval amount on it
 	*/
 	void GameState::increaseIncline(int interval){
-		incline = interval;
-		
+		incline += interval;
 
 		if (incline > MAX_INCLINE) incline = MAX_INCLINE;
 		else if (incline < MIN_INCLINE) incline = MIN_INCLINE;

@@ -27,22 +27,24 @@ public:
 	byte getVibration();
 	byte getResistance();
 
-	static char* GameState::toString(){
-		char* stateString = new char[];
-		stateString[0] = '0' + state;
-		stateString[1] = '0' + incline;
-		stateString[2] = '0' + angle;
-		stateString[3] = '0' + vibration;
-		stateString[4] = '0' + resistance;
+	static string GameState::toString(){
+		string separator = ",";
+		string stateString;
+
+		stateString = std::to_string(state) + separator;
+		stateString += std::to_string(incline) + separator;
+		stateString += std::to_string(angle) + separator;
+		stateString += std::to_string(vibration) + separator;
+		stateString += std::to_string(resistance);
 
 		return stateString;
 	}
 
-	static unsigned int state;
-	static unsigned int incline;
+	static int state;
+	static int incline;
 	static int angle;
-	static unsigned int vibration;
-	static unsigned int resistance;
+	static int vibration;
+	static int resistance;
 
 	static const int MAX_INCLINE = 5;
 	static const int MIN_INCLINE = 0;

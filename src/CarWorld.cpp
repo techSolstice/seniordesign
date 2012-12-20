@@ -157,7 +157,7 @@ void CarWorld::DrawOnScreen()
 	Hgl::SetColor(White);
 	//Hgl::WriteText(FPSCaption.str().c_str(), Point2D(-.25,.75)); //write fps and speed*/
 	Hgl::WriteText("Coins: 0", Point2D(0.6, .9)); //write fps and speed*/
-	Hgl::WriteText(GameState::toString(), Point2D(0.6, .8)); //write fps and speed*/
+	Hgl::WriteText(GameState::toString().c_str(), Point2D(0.6, .8)); //write fps and speed*/
 
 	//draw car info
 	Hgl::Translate(Point3D(.75,-.75,0));

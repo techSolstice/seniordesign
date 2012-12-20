@@ -26,11 +26,11 @@ ArduinoCom::~ArduinoCom(){
 
 char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance){
 	char packet[5];
-	packet[0] = state + '0';
-	packet[1] = incline + '0';
-	packet[2] = angle + '0';
-	packet[3] = vibration + '0';
-	packet[4] = resistance + '0';
+	packet[0] = state;
+	packet[1] = incline;
+	packet[2] = angle;
+	packet[3] = vibration;
+	packet[4] = resistance;
 
 	return packet;
 }
@@ -68,7 +68,9 @@ bool ArduinoCom::open_port(){
 
 bool ArduinoCom::close_port(){
 	ArduinoCom::isConnected = false;
-	CloseHandle(ArduinoCom::hDevice);
+	if (NULL != ArduinoCom::hDevice)
+		CloseHandle(ArduinoCom::hDevice);
+
 	return true;
 }
 
