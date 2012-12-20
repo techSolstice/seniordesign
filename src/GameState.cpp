@@ -67,8 +67,8 @@ int GameState::resistance = 0;
 	void GameState::increaseAngle(int angleAmount){
 		angle += angleAmount;
 
-		if (angleAmount > MAX_ANGLE) angle = MAX_ANGLE;
-		if (angleAmount < MIN_ANGLE) angle = MIN_ANGLE;
+		if (angle > MAX_ANGLE) angle = MAX_ANGLE;
+		if (angle < MIN_ANGLE) angle = MIN_ANGLE;
 	}
 
 	void GameState::increaseVibration(int vibrationLevel){

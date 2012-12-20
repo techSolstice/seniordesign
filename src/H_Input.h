@@ -42,8 +42,8 @@ public:
 
 
 	REAL speed;
-	ArduinoCom* ComPort;
-	GameState* gameState;
+	ArduinoCom ComPort;
+	GameState gameState;
 private:
 	HWindow *m_HWindow;
 	REAL Yaxis; //from -1(down) to 1(up)

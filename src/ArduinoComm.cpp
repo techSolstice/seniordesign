@@ -6,6 +6,10 @@
 
 using namespace std;
 
+/*
+	This object is instantiated by the constructor of the KeyJoystick class, part of H_Input.cpp
+*/
+
 	bool ArduinoCom::isConnected;
 	HANDLE ArduinoCom::hDevice;
 

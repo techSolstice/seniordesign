@@ -23,15 +23,18 @@ KeyJoystick::KeyJoystick(HWindow *w) :
 	button(false)
 {
 	//hDevice = open_port();
-	ArduinoCom* ComPort = new ArduinoCom;
-	GameState* gameState = new GameState;
+	//ArduinoCom* ComPort = new ArduinoCom;
+	//GameState* gameState = new GameState;
+	ArduinoCom ComPort;
+	GameState gameState;
 }
 
 KeyJoystick::~KeyJoystick()
 {
-	(*ComPort).close_port();
-	delete ComPort;
-	delete gameState;
+	//(*ComPort).close_port();
+	ComPort.close_port();
+	//delete ComPort;
+	//delete gameState;
 
 }
 
@@ -83,38 +86,38 @@ void KeyJoystick::UpdateState()
 		Yaxis = H_MIN(0,Yaxis+speed);
 
 	if (UpState) {
-		ComPort->send_data("U");
+		ComPort.send_data("U");
 	}
 	UpdateGameState();
 }
 
 void KeyJoystick::UpdateGameState(){
 	if (m_HWindow->IsPressed(SDLK_q))
-		(*gameState).increaseIncline(1);
-	if (m_HWindow->IsPressed(SDLK_a)) (*gameState).increaseIncline(-1);
-	if (m_HWindow->IsPressed(SDLK_w)) (*gameState).increaseAngle(1);
-	if (m_HWindow->IsPressed(SDLK_s)) (*gameState).increaseAngle(-1);
-	if (m_HWindow->IsPressed(SDLK_e)) (*gameState).increaseVibration(1);
-	if (m_HWindow->IsPressed(SDLK_d)) (*gameState).increaseVibration(-1);
-	if (m_HWindow->IsPressed(SDLK_r)) (*gameState).increaseResistance(1);
-	if (m_HWindow->IsPressed(SDLK_f)) (*gameState).increaseResistance(-1);
+		gameState.increaseIncline(1);
+	if (m_HWindow->IsPressed(SDLK_a)) gameState.increaseIncline(-1);
+	if (m_HWindow->IsPressed(SDLK_w)) gameState.increaseAngle(1);
+	if (m_HWindow->IsPressed(SDLK_s)) gameState.increaseAngle(-1);
+	if (m_HWindow->IsPressed(SDLK_e)) gameState.increaseVibration(1);
+	if (m_HWindow->IsPressed(SDLK_d)) gameState.increaseVibration(-1);
+	if (m_HWindow->IsPressed(SDLK_r)) gameState.increaseResistance(1);
+	if (m_HWindow->IsPressed(SDLK_f)) gameState.increaseResistance(-1);
 
-	if (m_HWindow->IsPressed(SDLK_0)) (*gameState).setState(0);
-	if (m_HWindow->IsPressed(SDLK_1)) (*gameState).setState(1);
-	if (m_HWindow->IsPressed(SDLK_2)) (*gameState).setState(2);
-	if (m_HWindow->IsPressed(SDLK_3)) (*gameState).setState(3);
-	if (m_HWindow->IsPressed(SDLK_4)) (*gameState).setState(4);
-	if (m_HWindow->IsPressed(SDLK_5)) (*gameState).setState(5);
-	if (m_HWindow->IsPressed(SDLK_6)) (*gameState).setState(6);
-	if (m_HWindow->IsPressed(SDLK_7)) (*gameState).setState(7);
+	if (m_HWindow->IsPressed(SDLK_0)) gameState.setState(0);
+	if (m_HWindow->IsPressed(SDLK_1)) gameState.setState(1);
+	if (m_HWindow->IsPressed(SDLK_2)) gameState.setState(2);
+	if (m_HWindow->IsPressed(SDLK_3)) gameState.setState(3);
+	if (m_HWindow->IsPressed(SDLK_4)) gameState.setState(4);
+	if (m_HWindow->IsPressed(SDLK_5)) gameState.setState(5);
+	if (m_HWindow->IsPressed(SDLK_6)) gameState.setState(6);
+	if (m_HWindow->IsPressed(SDLK_7)) gameState.setState(7);
 
-	ComPort->send_data(
-		ComPort->create_packet(
-			gameState->getState(), 
-			gameState->getIncline(), 
-			gameState->getAngle(), 
-			gameState->getVibration(), 
-			gameState->getResistance()
+	ComPort.send_data(
+		ComPort.create_packet(
+			gameState.getState(), 
+			gameState.getIncline(), 
+			gameState.getAngle(), 
+			gameState.getVibration(), 
+			gameState.getResistance()
 		)
 	);
 
