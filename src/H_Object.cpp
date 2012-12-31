@@ -166,6 +166,12 @@ bool OFFObject::IsInit()
 	return MyOFFVertexes.size() != 0;
 }
 
+/**
+    Reads in an OFF file with given textures, vertices and faces.
+        Textures: MyTexture ("OFF2"\n textureName)
+        Vertices: MyOFFVertexes.TexCoord
+        Faces: MyOFFPolygons
+*/
 void OFFObject::readfile(const char* FileName)
 {
 	try

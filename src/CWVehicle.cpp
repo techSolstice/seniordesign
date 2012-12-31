@@ -41,6 +41,10 @@ Wheel::Wheel(
 	reset();
 }
 
+/**
+	Initialize drawing the wheel, based on the given file (OFF)
+	Then ...
+*/
 void Wheel::draw_init()
 {
 	Model.readfile(ModelFile.c_str());

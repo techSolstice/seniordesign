@@ -407,6 +407,9 @@ void FixedVector::reset()
 }
 Contact::Contact() : Found(false) {}
 
+/*
+	Performs x^n for any int n >=1
+*/
 REAL RaiseTo (REAL x, int n)
 {
 	REAL tmp = 1;
@@ -415,7 +418,9 @@ REAL RaiseTo (REAL x, int n)
 	return tmp;
 }
 
-
+/**
+	Returns the largest number less than x that is a power of 2
+*/
 unsigned int LargestPowOf2(unsigned int x)
 {
 	unsigned int tmp = 1;

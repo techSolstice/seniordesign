@@ -28,6 +28,7 @@ ArduinoCom::~ArduinoCom(){
 	}
 }
 
+
 char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibration, byte resistance){
 	char packet[5];
 	packet[0] = state;
@@ -39,6 +40,7 @@ char* ArduinoCom::create_packet(byte state, byte incline, byte angle, byte vibra
 	return packet;
 }
 
+
 int ArduinoCom::send_data(char* temp){
 	if (open_port()){
 		DWORD btsIO;
@@ -47,6 +49,19 @@ int ArduinoCom::send_data(char* temp){
 	return 0;
 }
 
+int ArduinoCom::receive_data(){
+	if (open_port()){
+		if (ReadFile(ArduinoCom::hDevice, buffer, sizeof(buffer), &read, NULL)){
+			;
+		}
+	}
+	return 0;
+}
+
+
+/**
+	Port operations
+*/
 
 bool ArduinoCom::open_port(){
 	bool debug = true;

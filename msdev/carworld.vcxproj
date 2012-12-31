@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ArduinoComm.cpp" />
+    <ClCompile Include="..\src\DriveTrain.cpp" />
     <ClCompile Include="..\src\DXJoystick.cpp" />
     <ClCompile Include="..\src\GameState.cpp" />
     <ClCompile Include="..\src\H_PosixSocket.cpp" />
@@ -172,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\ArduinoComm.h" />
+    <ClInclude Include="..\src\DriveTrain.h" />
     <ClInclude Include="..\src\DXJoystick.h" />
     <ClInclude Include="..\src\GameState.h" />
     <ClInclude Include="..\src\H_Main.h" />

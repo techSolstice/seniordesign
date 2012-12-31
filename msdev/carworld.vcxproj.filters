@@ -91,6 +91,9 @@
     <ClCompile Include="..\src\GameState.cpp">
       <Filter>CarWorld specific</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\DriveTrain.cpp">
+      <Filter>CarWorld specific</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DXJoystick.h">
@@ -169,6 +172,9 @@
       <Filter>CarWorld specific</Filter>
     </ClInclude>
     <ClInclude Include="..\src\GameState.h">
+      <Filter>CarWorld specific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DriveTrain.h">
       <Filter>CarWorld specific</Filter>
     </ClInclude>
   </ItemGroup>

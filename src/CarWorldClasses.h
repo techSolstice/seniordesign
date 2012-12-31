@@ -7,6 +7,7 @@
 #include "H_Object.h"
 #include "WorldBlock.h"
 #include "Tacho.h"
+#include "DriveTrain.h"	//only used in CWVehicle
 //#include "CWVehiclePropeties.h"
 
 //Set of objects

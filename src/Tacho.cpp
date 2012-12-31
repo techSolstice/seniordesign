@@ -85,6 +85,3 @@ void Tacho::draw(REAL Revs)
 	glEnd();
 	Hgl::SetColor(Color(255,255,255));
 }
-
-//clas DriveTrain:
-

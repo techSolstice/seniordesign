@@ -160,6 +160,10 @@ int find(int argc, char **argv, const char *v)
 
 extern ofstream herr;
 
+
+/*
+	This is the main of the entire program.
+*/
 int main(int argc, char *argv[])
 {
 
